@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+
+<link href="~/Content/OurStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="topPanel">
+        <table>
+            <tr>
+                <h1>Cricket Info Web</h1>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                <td>@Html.ActionLink("Team Home", "Index", "Team")</td>
+                <td>@Html.ActionLink("Team Display", "Display", "Team")</td>
+
+            
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="mainPanel">
+        @RenderBody()
+    </div>
+    <div class="footer"><p style="background-color:white; text-align:center;">All Rights reserved to Students &reg;</p></div>
+</body>
+</html>
